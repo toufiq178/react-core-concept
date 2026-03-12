@@ -1,17 +1,18 @@
 import { useState } from 'react'
-
+import Count from './Count'
+import Batsman from './Batsman'
 import './App.css'
 
 function App() {
-  
+
   function handlerClick() {
-    
-    alert ("im clicked")
+
+    alert("im clicked")
   }
 
   function handlerClick2(params) {
-    
-    alert ("im click 2 = " + (params + 10))
+
+    alert("im click 2 = " + (params + 10))
   }
 
 
@@ -20,20 +21,26 @@ function App() {
 
   return (
     <>
-      
+
       <h1>Vite + React</h1>
-      
+
+      <Batsman></Batsman>
+
+      <Count></Count>
+
+
+
       <button onClick={handlerClick}>Click me</button>
       <button onClick={() => handlerClick2(7)}>Click me 2</button>
       <button onClick={handlerClick3}>Click me 3</button>
-      <button onClick={() => handlerClick4 (9)}>Click me 4</button>
+      <button onClick={() => handlerClick4(9)}>Click me 4</button>
 
 
-      <button onClick={function handlerClick5() { 
+      <button onClick={function handlerClick5() {
         alert("i am btn 5")
       }}
       >Click Me 5</button>
-      
+
     </>
   )
 }
