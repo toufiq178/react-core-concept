@@ -6,6 +6,7 @@ import Users from './Users'
 import Friends from './Friends'
 import Comments from './Comments'
 import Counting from './Counting'
+import ShowHide from './ShowHide'
 
 
 // const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json())
@@ -48,10 +49,10 @@ function App() {
 
 
 
+      <ShowHide></ShowHide>
 
 
-
-      <Counting></Counting>
+      {/* <Counting></Counting> */}
 
 
 
