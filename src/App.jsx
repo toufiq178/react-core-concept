@@ -7,6 +7,7 @@ import Friends from './Friends'
 import Comments from './Comments'
 import Counting from './Counting'
 import ShowHide from './ShowHide'
+import Fetch from './Fetch'
 
 
 // const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json())
@@ -18,12 +19,20 @@ import ShowHide from './ShowHide'
 //   return res.json()
 // }
 
+const fetchUser = async () => {
+
+  const res = await fetch("https://jsonplaceholder.typicode.com/users")
+
+  return res.json()
+}
 
 // const fetchComments = fetch("https://jsonplaceholder.typicode.com/comments").then(res => res.json())
 
 function App() {
 
   // const friendsPromise = fetchFriends()
+
+  const fetchPromise = fetchUser()
 
   // function handlerClick() {
 
@@ -47,9 +56,12 @@ function App() {
 
 
 
+      <Suspense fallback={<p>loading...</p>}>
+        <Fetch fetchPromise = {fetchPromise}></Fetch>
+      </Suspense>
 
 
-      <ShowHide></ShowHide>
+      {/* <ShowHide></ShowHide> */}
 
 
       {/* <Counting></Counting> */}
