@@ -5,6 +5,7 @@ import './App.css'
 import Users from './Users'
 import Friends from './Friends'
 import Comments from './Comments'
+import Counting from './Counting'
 
 
 // const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json())
@@ -17,25 +18,25 @@ import Comments from './Comments'
 // }
 
 
-const fetchComments = fetch("https://jsonplaceholder.typicode.com/comments").then(res => res.json())
+// const fetchComments = fetch("https://jsonplaceholder.typicode.com/comments").then(res => res.json())
 
 function App() {
 
   // const friendsPromise = fetchFriends()
 
-  function handlerClick() {
+  // function handlerClick() {
 
-    alert("im clicked")
-  }
+  //   alert("im clicked")
+  // }
 
-  function handlerClick2(params) {
+  // function handlerClick2(params) {
 
-    alert("im click 2 = " + (params + 10))
-  }
+  //   alert("im click 2 = " + (params + 10))
+  // }
 
 
-  const handlerClick3 = () => alert("im click 3")
-  const handlerClick4 = (param) => alert("im click 4 = " + (param * 8))
+  // const handlerClick3 = () => alert("im click 3")
+  // const handlerClick4 = (param) => alert("im click 4 = " + (param * 8))
 
   return (
     <>
@@ -43,10 +44,37 @@ function App() {
       <h1>Vite + React</h1>
 
 
-      <Suspense fallback = {<h1>Comments loading...</h1>}>
+
+
+
+
+
+
+
+      <Counting></Counting>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <Suspense fallback = {<h1>Comments loading...</h1>}>
 
         <Comments fetchComments = {fetchComments}></Comments>
-      </Suspense>
+      </Suspense> */}
 
 
       {/* <Suspense fallback={<h2>Loading friends...</h2>}>
@@ -68,22 +96,22 @@ function App() {
 
 
 
-      <Batsman></Batsman>
+      {/* <Batsman></Batsman>
 
-      <Count></Count>
+      <Count></Count> */}
 
 
 
-      <button onClick={handlerClick}>Click me</button>
+      {/* <button onClick={handlerClick}>Click me</button>
       <button onClick={() => handlerClick2(7)}>Click me 2</button>
       <button onClick={handlerClick3}>Click me 3</button>
-      <button onClick={() => handlerClick4(9)}>Click me 4</button>
+      <button onClick={() => handlerClick4(9)}>Click me 4</button> */}
 
 
-      <button onClick={function handlerClick5() {
+      {/* <button onClick={function handlerClick5() {
         alert("i am btn 5")
       }}
-      >Click Me 5</button>
+      >Click Me 5</button> */}
 
     </>
   )
