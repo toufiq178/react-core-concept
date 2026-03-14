@@ -8,7 +8,12 @@ import Comments from './Comments'
 import Counting from './Counting'
 import ShowHide from './ShowHide'
 import Fetch from './Fetch'
-
+import Fruits from './Fruits'
+import Students from './Students'
+import Likes from './Likes'
+import Toggle from './Toggle'
+import Status from './Status'
+import Person from './Person'
 
 // const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json())
 
@@ -19,20 +24,58 @@ import Fetch from './Fetch'
 //   return res.json()
 // }
 
-const fetchUser = async () => {
+// const fetchUser = async () => {
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/users")
+//   const res = await fetch("https://jsonplaceholder.typicode.com/users")
 
-  return res.json()
-}
+//   return res.json()
+// }
 
 // const fetchComments = fetch("https://jsonplaceholder.typicode.com/comments").then(res => res.json())
 
+
+
+
+const Persons = fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json());
+
+
+
+
+
+
+
+
 function App() {
+
+
+
+
+
+
+
+
+
+
+  // const fruits = ["Apple", "Mango", "Banana", "Orange"]
+
+  // const students = [
+  //   { id: 1, name: "Rahim", age: 20 },
+  //   { id: 2, name: "Karim", age: 22 },
+  //   { id: 3, name: "Hasan", age: 21 }
+  // ]
+
+  // const products = [
+  //   { id: 1, name: "Shirt", price: 500 },
+  //   { id: 2, name: "Pant", price: 800 },
+  //   { id: 3, name: "Shoes", price: 1200 }
+  // ]
+
+
+
 
   // const friendsPromise = fetchFriends()
 
-  const fetchPromise = fetchUser()
+  // const fetchPromise = fetchUser()
 
   // function handlerClick() {
 
@@ -48,23 +91,24 @@ function App() {
   // const handlerClick3 = () => alert("im click 3")
   // const handlerClick4 = (param) => alert("im click 4 = " + (param * 8))
 
+
+
+
   return (
     <>
 
-      <h1>Vite + React</h1>
+      <h1>React Core Concept</h1>
 
 
 
 
       <Suspense fallback={<p>loading...</p>}>
-        <Fetch fetchPromise = {fetchPromise}></Fetch>
+
+        <Person Persons={Persons}></Person>
+
       </Suspense>
 
 
-      {/* <ShowHide></ShowHide> */}
-
-
-      {/* <Counting></Counting> */}
 
 
 
@@ -81,6 +125,30 @@ function App() {
 
 
 
+      {/* <Status></Status>
+      <Students students={students}></Students>
+      <Students students={products}></Students>
+
+
+      <Fruits fruits={fruits}></Fruits>
+
+      <Likes></Likes>
+      <Toggle></Toggle> */}
+
+
+
+
+
+      {/* <Suspense fallback={<p>loading...</p>}>
+        <Fetch fetchPromise = {fetchPromise}></Fetch>
+      </Suspense> */}
+
+      {/* 
+      <ShowHide></ShowHide>
+
+
+      <Counting></Counting>
+ */}
 
 
 
@@ -108,8 +176,8 @@ function App() {
 
 
 
-
-      {/* <Batsman></Batsman>
+      {/* 
+      <Batsman></Batsman>
 
       <Count></Count> */}
 
